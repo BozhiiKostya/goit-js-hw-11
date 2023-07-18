@@ -35,7 +35,7 @@ function onClickLoad(evt) {
 
 async function createPetsMarkup(inputValue) {
   try {
-    requestApi(inputValue, imgPage).then(res => {
+    requestApi(inputValue, imgPage, getImages).then(res => {
       getImages = res;
       const data = getImages.data.hits;
       totalImg = getImages.data.total;
